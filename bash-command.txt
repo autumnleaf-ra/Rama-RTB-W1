@@ -1,0 +1,9 @@
+cd = mengganti directory
+rm = menghapus file
+rmdir = menghapus folder
+mkdir = membuat folder
+touch = membuat file
+cp = mengcopy file
+mv = merubah file / memindahkan folder
+cat = melihat isi file
+ls = melihat list directory
