@@ -1,5 +1,5 @@
 function myFunction(a) {
-  return console.log(a.substring(0, 3));
+  return console.log(a.substring(0, a.length / 2));
 }
 
 // Test Case

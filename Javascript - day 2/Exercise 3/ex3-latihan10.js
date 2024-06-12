@@ -1,5 +1,5 @@
-function myFunction(a, b) {
-  return console.log(a.slice(0, 4));
+function myFunction(a) {
+  return a.slice(0, -3);
 }
 
 // Test Case
