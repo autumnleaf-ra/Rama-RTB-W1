@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link ref -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- header -->
+        <div class="section-header">
+          <div class="name-app">calc</div>
+          <div class="theme">
+            <span class="number-theme">1 2 3</span>
+            <div class="slider-theme">
+              <span class="theme-info"> Theme </span>
+              <span class="number-selection-theme">
+                <input
+                  class="slider-component"
+                  type="radio"
+                  name="toggle"
+                  id="one"
+                />
+                <input
+                  class="slider-component"
+                  type="radio"
+                  name="toggle"
+                  id="one"
+                />
+                <input
+                  class="slider-component"
+                  type="radio"
+                  name="toggle"
+                  id="one"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- inputed number -->
+        <div class="input-section">
+          <input type="text" id="inputed-number" />
+        </div>
+
+        <!-- input button -->
+        <div class="mid-section">
+          <div class="input-button">
+            <div class="grid-button">
+              <button class="number grid-item" value="7">7</button>
+              <button class="number grid-item" value="8">8</button>
+              <button class="number grid-item" value="9">9</button>
+              <button class="grid-item delete">DEL</button>
+              <button class="number grid-item" value="4">4</button>
+              <button class="number grid-item" value="5">5</button>
+              <button class="number grid-item" value="6">6</button>
+              <button class="grid-item">+</button>
+              <button class="number grid-item" value="1">1</button>
+              <button class="number grid-item" value="2">2</button>
+              <button class="number grid-item" value="3">3</button>
+              <button class="grid-item">-</button>
+              <button class="grid-item">.</button>
+              <button class="number grid-item" value="9">0</button>
+              <button class="grid-item">/</button>
+              <button class="grid-item">x</button>
+            </div>
+            <div class="grid-bottom">
+              <button class="grid-item-buttom reset-button">RESET</button>
+              <button class="grid-item-buttom operator-button">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

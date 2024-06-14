@@ -1,0 +1,183 @@
+:root {
+  --background-color: rgb(59, 70, 100);
+  --text-color: white;
+  --background-input: hsl(224, 35%, 15%);
+  --d-r-color: hsl(225, 53%, 76%);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "League Spartan", sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 32px;
+}
+
+main .name-app {
+  font-size: 30px;
+}
+
+/* main .top {
+  color: white;
+  display: flex;
+  margin-left: 140px;
+  margin-right: 140px;
+} */
+
+/* p {
+  color: white;
+  display: flex;
+  justify-content: center;
+} */
+
+main .header-select {
+  display: flex;
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+input[type="radio"]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -9px;
+
+  position: relative;
+  background-color: hsl(6, 62%, 50%);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid hsl(6, 62%, 50%);
+}
+
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -9px;
+  position: relative;
+  background-color: hsl(6, 62%, 50%);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid hsl(6, 62%, 50%);
+}
+
+.slider-component {
+  width: 10px;
+  height: 10px;
+  margin-left: -3px;
+}
+
+main .container > div {
+  display: flex;
+  justify-content: center;
+}
+
+main .section-header .theme-info {
+  margin-right: 20px;
+}
+
+main .section-header .number-theme {
+  margin-left: 80px;
+}
+
+main .section-header .number-selection-theme {
+  border: 2px solid hsl(225, 30%, 22%);
+  padding-top: 3px;
+  border-radius: 20px;
+  padding-right: 2px;
+  padding-left: 6px;
+  padding-bottom: 1px;
+  background-color: hsl(225, 30%, 22%);
+}
+
+main .section-header > div {
+  padding: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  color: var(--text-color);
+}
+
+main .input-button {
+  background-color: hsl(224, 36%, 15%);
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+section .input-section > input {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-button {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+.grid-button :hover {
+  background-color: white;
+}
+
+main .mid-section .delete {
+  background-color: var(--d-r-color);
+  color: var(--text-color);
+}
+
+.grid-bottom {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+.grid-item {
+  color: hsl(221, 14%, 31%);
+  padding: 20px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+.grid-item-buttom {
+  color: hsl(221, 14%, 31%);
+  padding: 10px;
+  margin-top: -10px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  border-radius: 10px;
+}
+
+input {
+  width: 340px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: var(--background-input);
+  outline: none;
+  text-align: right;
+  color: var(--text-color);
+  box-shadow: none;
+}
+
+.reset-button {
+  background-color: var(--d-r-color);
+  color: var(--text-color);
+}
+
+.operator-button {
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+}
