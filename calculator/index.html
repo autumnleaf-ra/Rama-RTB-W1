@@ -21,6 +21,7 @@
           <div class="name-app">calc</div>
           <div class="theme">
             <span class="number-theme">1 2 3</span>
+            <!-- slider theme -->
             <div class="slider-theme">
               <span class="theme-info"> Theme </span>
               <span class="number-selection-theme">
@@ -49,7 +50,7 @@
 
         <!-- inputed number -->
         <div class="input-section">
-          <input type="text" id="inputed-number" />
+          <input type="text" id="inputed-number" disabled />
         </div>
 
         <!-- input button -->
@@ -59,23 +60,36 @@
               <button class="number grid-item" value="7">7</button>
               <button class="number grid-item" value="8">8</button>
               <button class="number grid-item" value="9">9</button>
-              <button class="grid-item delete">DEL</button>
+              <button class="grid-item delete" onclick="deleteNumber()">
+                DEL
+              </button>
               <button class="number grid-item" value="4">4</button>
               <button class="number grid-item" value="5">5</button>
               <button class="number grid-item" value="6">6</button>
-              <button class="grid-item">+</button>
+              <button class="operator grid-item" value="+">+</button>
               <button class="number grid-item" value="1">1</button>
               <button class="number grid-item" value="2">2</button>
               <button class="number grid-item" value="3">3</button>
-              <button class="grid-item">-</button>
-              <button class="grid-item">.</button>
-              <button class="number grid-item" value="9">0</button>
-              <button class="grid-item">/</button>
-              <button class="grid-item">x</button>
+              <button class="operator grid-item" value="-">-</button>
+              <button class="operator grid-item" value=".">.</button>
+              <button class="number grid-item" value="0" value="9">0</button>
+              <button class="operator grid-item" value="/">/</button>
+              <button class="operator grid-item" value="*">x</button>
             </div>
+            <!-- button -->
             <div class="grid-bottom">
-              <button class="grid-item-buttom reset-button">RESET</button>
-              <button class="grid-item-buttom operator-button">=</button>
+              <button
+                class="grid-item-buttom reset-button"
+                onclick="ResetNumber()"
+              >
+                RESET
+              </button>
+              <button
+                class="grid-item-buttom operator-button"
+                onclick="calculate()"
+              >
+                =
+              </button>
             </div>
           </div>
         </div>

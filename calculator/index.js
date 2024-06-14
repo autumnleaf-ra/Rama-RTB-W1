@@ -33,13 +33,44 @@ arr.forEach((e, i) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let inputData = document.querySelector("#inputed-number");
-  let nButton = document.querySelectorAll(".number");
-  let deleteButton = document.querySelector(".delete");
+  const inputData = document.querySelector("#inputed-number");
+  const nButton = document.querySelectorAll(".number");
+  const operator = document.querySelectorAll(".operator");
 
+  // opeartor
   nButton.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       inputData.value += this.value;
     });
   });
+
+  operator.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      inputData.value += this.value;
+    });
+  });
 });
+
+function ResetNumber() {
+  const reset = (document.getElementById("inputed-number").value = "");
+  return reset;
+}
+
+function calculate() {
+  const cal = document.getElementById("inputed-number");
+  // cal.value = eval(cal.value);
+
+  try {
+    cal.value = eval(cal.value);
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      cal.value = "Syntax Error";
+      // alert(e.message);
+    }
+  }
+}
+
+function deleteNumber() {
+  const dat = document.getElementById("inputed-number");
+  dat.value = dat.value.substring(0, dat.value.length - 1);
+}
