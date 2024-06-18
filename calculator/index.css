@@ -3,6 +3,13 @@
   --text-color: white;
   --background-input: hsl(224, 35%, 15%);
   --d-r-color: hsl(225, 53%, 76%);
+  --background-number: hsl(32, 26%, 89%);
+  --number-color: hsl(218, 17%, 29%);
+  --bg-color-button: hsl(224, 35%, 15%);
+  --bg-color-dr: white;
+  --bg-assign: hsl(6, 93%, 67%);
+  --color-hover: white;
+  --color-assign-text: white;
 }
 
 body {
@@ -45,7 +52,7 @@ input[type="radio"] {
 
 input[type="radio"]:after {
   width: 10px;
-  height: 10px;
+  height: 12px;
   border-radius: 15px;
   top: -10px;
 
@@ -59,7 +66,7 @@ input[type="radio"]:after {
 
 input[type="radio"]:checked:after {
   width: 10px;
-  height: 10px;
+  height: 12px;
   border-radius: 15px;
   top: -9px;
   position: relative;
@@ -68,6 +75,10 @@ input[type="radio"]:checked:after {
   display: inline-block;
   visibility: visible;
   border: 2px solid hsl(6, 62%, 50%);
+}
+
+.container {
+  padding-top: 40px;
 }
 
 .slider-component {
@@ -116,7 +127,7 @@ main .section-header > div {
 }
 
 main .input-button {
-  background-color: hsl(224, 36%, 15%);
+  background-color: var(--bg-color-button);
   padding-top: 5px;
   padding-right: 20px;
   padding-left: 20px;
@@ -138,12 +149,12 @@ section .input-section > input {
 }
 
 .grid-button :hover {
-  background-color: white;
+  background-color: var(--color-hover);
 }
 
 main .mid-section .delete {
   background-color: var(--d-r-color);
-  color: var(--text-color);
+  color: var(--bg-color-dr);
 }
 
 .grid-bottom {
@@ -154,8 +165,9 @@ main .mid-section .delete {
 }
 
 .grid-item {
-  color: hsl(221, 14%, 31%);
-  padding: 20px;
+  color: var(--number-color);
+  background-color: var(--background-number);
+  padding: 10px;
   font-family: "League Spartan", sans-serif;
   font-size: 32px;
   border-radius: 10px;
@@ -183,10 +195,10 @@ input {
 
 .reset-button {
   background-color: var(--d-r-color);
-  color: var(--text-color);
+  color: var(--bg-color-dr);
 }
 
 .operator-button {
-  background-color: hsl(6, 63%, 50%);
-  color: white;
+  background-color: var(--bg-assign);
+  color: var(--color-assign-text);
 }
