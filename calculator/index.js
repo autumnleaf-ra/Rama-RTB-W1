@@ -1,5 +1,6 @@
 let slider = document.getElementsByClassName("slider-component");
 const root = document.documentElement;
+let dataTemp = "";
 let arr = [...slider];
 
 arr.forEach((e, i) => {
@@ -58,13 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // opeartor
   nButton.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      inputData.value += this.value;
+      if (
+        inputData.value === "Syntax Error" ||
+        inputData.value === "NaN" ||
+        inputData.value === "Infinity"
+      ) {
+        inputData.value = "";
+      }
+
+      dataTemp += this.value;
+      inputData.value = dataTemp;
+      // console.log(dataTemp);
     });
   });
 
   operator.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      inputData.value += this.value;
+      dataTemp += this.value;
+      inputData.value = dataTemp;
     });
   });
 });
@@ -79,7 +91,8 @@ function calculate() {
   // cal.value = eval(cal.value);
 
   try {
-    cal.value = eval(cal.value);
+    cal.value = eval(dataTemp);
+    dataTemp = "";
   } catch (e) {
     if (e instanceof SyntaxError) {
       cal.value = "Syntax Error";
