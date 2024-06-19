@@ -1,6 +1,6 @@
 let slider = document.getElementsByClassName("slider-component");
 const root = document.documentElement;
-let dataTemp = "";
+let isAssign = false;
 let arr = [...slider];
 
 arr.forEach((e, i) => {
@@ -67,16 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
         inputData.value = "";
       }
 
-      dataTemp += this.value;
-      inputData.value = dataTemp;
+      inputData.value += this.value;
       // console.log(dataTemp);
     });
   });
 
   operator.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      dataTemp += this.value;
-      inputData.value = dataTemp;
+      inputData.value += this.value;
     });
   });
 });
@@ -91,8 +89,8 @@ function calculate() {
   // cal.value = eval(cal.value);
 
   try {
-    cal.value = eval(dataTemp);
-    dataTemp = "";
+    cal.value = eval(cal.value);
+    isAssign = true;
   } catch (e) {
     if (e instanceof SyntaxError) {
       cal.value = "Syntax Error";
@@ -103,5 +101,12 @@ function calculate() {
 
 function deleteNumber() {
   const dat = document.getElementById("inputed-number");
+  if (
+    dat.value === "Syntax Error" ||
+    dat.value === "NaN" ||
+    dat.value === "Infinity"
+  ) {
+    dat.value = "";
+  }
   dat.value = dat.value.substring(0, dat.value.length - 1);
 }
